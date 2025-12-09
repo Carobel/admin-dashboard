@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body, html {
+  height: 100%;
+}
+
+.layout {
+    background-color: rgb(230,232,240);
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 8fr;
+}
+
+.layout > div {
+    padding: 15px;
+    font-size: 20px;
+}
+
+.header {
+    grid-column: 2 / 3;
+    background-color: rgb(250, 250, 255);
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.header > div {
+    display: flex;
+}
+
+.sidebar {
+    grid-row: 1 / 3;
+    background-color: rgb(38, 154, 207);
+}
+

@@ -28,11 +28,16 @@ body, html {
     grid-column: 2 / 3;
     background-color: rgb(250, 250, 255);
     display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
 }
 
 .header > div {
     display: flex;
+}
+
+.push-right {
+    margin-left: auto;
 }
 
 .sidebar {

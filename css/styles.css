@@ -7,6 +7,11 @@ ul {
     list-style: none;
 }
 
+:root {
+    --base-color: rgb(38, 154, 207);
+    --accent-color: rgb(240, 171, 24);
+}
+
 body, html {
   height: 100%;
 }
@@ -20,7 +25,7 @@ body, html {
 }
 
 .layout > div {
-    padding: 15px;
+    padding: 30px 50px;
     font-size: 20px;
 }
 
@@ -28,20 +33,30 @@ body, html {
     grid-column: 2 / 3;
     background-color: rgb(250, 250, 255);
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 2fr;
+    gap: 25px;
+    align-items: center;
 }
 
-.header > div {
+.header > * {
     display: flex;
+    gap: 30px;
 }
 
-.push-right {
-    margin-left: auto;
+.header > .user-info,
+.header > .content-buttons {
+    justify-content: flex-end;
 }
+
+.content-button {
+    border: none;
+    background-color: var(--base-color);
+}
+
 
 .sidebar {
     grid-row: 1 / 3;
-    background-color: rgb(38, 154, 207);
+    background-color: var(--base-color);
 }
 

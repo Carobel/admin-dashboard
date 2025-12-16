@@ -41,6 +41,10 @@ input, button, textarea, select {
     font-family: 'Source Sans Pro', system-ui;
 }
 
+.icon {
+    height: 30px;
+    width: 30px;
+}
 
 /* GLOBAL LAYOUT */
 body, html {
@@ -58,7 +62,6 @@ body, html {
 .layout > div {
     padding: 1rem 2rem;
 }
-
 
 
 
@@ -108,7 +111,6 @@ body, html {
     color: inherit;
     font-size: 1.5rem;
     font-weight: bold;
-    
 }
 
 .sidebar .title {
@@ -116,6 +118,21 @@ body, html {
     font-weight: bold;
 }
 
+.sidebar .title .icon {
+    width: 60px;
+    height: 60px;
+}
+
+.sidebar img {
+    filter: brightness(0) invert(1);
+    margin-right: 15px;
+}
+
+.sidebar > div {
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+}
 
 /* MAIN AREA */
 .main {

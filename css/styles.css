@@ -1,4 +1,24 @@
-* {
+/* FONTS */
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../bin/fonts/SourceSansPro-Regular.woff2') format('woff2'),
+        url('../bin/fonts/SourceSansPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../bin/fonts/SourceSansPro-Bold.woff2') format('woff2'),
+        url('../bin/fonts/SourceSansPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* RESETS AND PRESETS */
+*, *:before, *:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,20 +28,25 @@ ul {
     list-style: none;
 }
 
+input, button, textarea, select {
+  font: inherit;
+}
+
 :root {
     --background-color: rgb(230,232,240);
     --header-color: rgb(250, 250, 255);
     --base-color: rgb(38, 154, 207);
     --accent-color: rgb(240, 171, 24);
     font-size: 18px;
-}
-
-body, html {
-  height: 100%;
+    font-family: 'Source Sans Pro', system-ui;
 }
 
 
 /* GLOBAL LAYOUT */
+body, html {
+  height: 100%;
+}
+
 .layout {
     background-color: var(--background-color);
     height: 100%;
@@ -33,6 +58,8 @@ body, html {
 .layout > div {
     padding: 1rem 2rem;
 }
+
+
 
 
 /* HEADER */
@@ -64,6 +91,7 @@ body, html {
     font-size: 1rem;
     color: var(--header-color);
     cursor: pointer;
+    font-weight: bold;
 }
 
 /* SIDEBAR */
@@ -117,13 +145,10 @@ body, html {
 .announcements-container {
     background-color: var(--header-color);
     border-radius: 8px;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
     padding: 1.5rem;
     height: 90%;
     display: flex;
     flex-direction: column;
-    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .announcements-container > * {
@@ -138,5 +163,13 @@ body, html {
 /* trending */
 .main > .trending {
     grid-area: trending;
+}
+
+.trending-container {
+    background-color: var(--header-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
 }
 

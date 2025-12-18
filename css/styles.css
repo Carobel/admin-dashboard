@@ -46,6 +46,16 @@ input, button, textarea, select {
     width: 30px;
 }
 
+.avatar {
+    height: 50px;
+    width: 50px;
+}
+
+.avatar-large {
+    height: 90px;
+    width: 90px;
+}
+
 /* GLOBAL LAYOUT */
 body, html {
   height: 100%;
@@ -79,11 +89,13 @@ body, html {
 .header > * {
     display: flex;
     gap: 30px;
+    align-items: center;
 }
 
 .header > .user-info,
 .header > .content-buttons {
     justify-content: flex-end;
+    
 }
 
 .content-button {
@@ -111,6 +123,9 @@ body, html {
     color: inherit;
     font-size: 1.5rem;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .sidebar .title {
@@ -128,11 +143,7 @@ body, html {
     margin-right: 15px;
 }
 
-.sidebar > div {
-    display: flex;
-    justify-content: start;
-    gap: 30px;
-}
+
 
 /* MAIN AREA */
 .main {

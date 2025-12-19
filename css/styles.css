@@ -63,7 +63,6 @@ body, html {
 
 .layout {
     background-color: var(--background-color);
-    height: 100%;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 8fr;
@@ -148,11 +147,15 @@ body, html {
 /* MAIN AREA */
 .main {
     display: grid;
-    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template: 550px 1fr / 2fr 1fr;
     gap: 1rem;
     grid-template-areas:
         "projects announcements"
         "projects trending"
+}
+
+.main h2 {
+    margin: 20px 0px 15px 0px;
 }
 
 /* projects */
@@ -181,21 +184,22 @@ body, html {
 }
 
 .announcements-container {
+    height: 90%;
     background-color: var(--header-color);
     border-radius: 8px;
     padding: 1.5rem;
-    height: 90%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
-.announcements-container > * {
+.announcements-container > div {
     flex-grow: 1;
 }
 
 .announcements-container hr {
     margin: 30px 50px;
-    color: gray;
+    color: rgb(180,180,180);
 }
 
 /* trending */
